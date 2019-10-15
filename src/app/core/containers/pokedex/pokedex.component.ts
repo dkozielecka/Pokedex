@@ -3,6 +3,8 @@ import {
   OnInit
 } from '@angular/core';
 import { ApiService } from '../../services/api.service';
+import { Observable } from 'rxjs';
+import { PokemonApi } from '../../models/interfaces/pokemon-api';
 
 @Component( {
   selector: 'app-pokedex',
@@ -11,15 +13,15 @@ import { ApiService } from '../../services/api.service';
 } )
 export class PokedexComponent
   implements OnInit {
+  private pokemons: Observable<PokemonApi[]>;
 
   constructor( private pokemonApi: ApiService ) {
 
   }
 
   ngOnInit() {
-    this.pokemonApi.getPokemons()
-      .subscribe(
-        e => console.log( e ) )
+    this.pokemons = this.pokemonApi.getPokemons();
+    this.pokemons.subscribe(evt => console.log(evt))
   }
 
   private getPokemonFromData() {
