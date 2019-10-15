@@ -1,19 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 import { ApiService } from '../../services/api.service';
 
-@Component({
+@Component( {
   selector: 'app-pokedex',
   templateUrl: './pokedex.component.html',
-  styleUrls: ['./pokedex.component.scss']
-})
-export class PokedexComponent implements OnInit {
-  private apitest;
+  styleUrls: [ './pokedex.component.scss' ]
+} )
+export class PokedexComponent
+  implements OnInit {
 
-  constructor(private api: ApiService) { }
+  constructor( pokemonApi: ApiService ) {
+
+  }
 
   ngOnInit() {
-    this.apitest = this.api.getPokemons();
-    console.log( this.apitest );
+    this.api.getPokemons().subscribe(e => console.log(e) )
+  }
+
+  private getPokemonFromData() {
+
   }
 
 }

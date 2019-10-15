@@ -7,6 +7,8 @@ import { PokedexComponent } from './core/containers/pokedex/pokedex.component';
 import { CardComponent } from './core/containers/card/card.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { HeaderComponent } from './core/components/header/header.component';
+import { ApiService } from './core/services/api.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,10 @@ import { HeaderComponent } from './core/components/header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

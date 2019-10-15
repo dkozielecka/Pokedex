@@ -1,5 +1,5 @@
-import { Pokemon } from './pokemon';
-import { Attack } from './attack';
+import { Pokemon } from '../interfaces/pokemon';
+import { Attack } from '../interfaces/attack';
 
 export class Card
   implements Pokemon {
