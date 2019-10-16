@@ -4,6 +4,7 @@ import { PokemonApi } from '../models/interfaces/pokemon-api';
 import { Observable } from 'rxjs';
 import { Card } from '../models/classes/card';
 import {
+  delay,
   map,
   pluck,
   shareReplay
@@ -34,6 +35,7 @@ export class ApiService {
     .pipe(
       pluck( 'cards' ),
       map( ApiService.createCards ),
+      delay(1500),
       shareReplay( 1 )
     );
 
