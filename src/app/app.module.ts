@@ -12,6 +12,8 @@ import { CardsListComponent } from './components/cards-list/cards-list.component
 import { CardComponent } from './components/card/card.component';
 import { GoTopButtonModule } from 'ng2-go-top-button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CardDetailComponent } from './components/card-detail/card-detail.component';
+import { SelectedPokemonComponent } from './containers/selected-pokemon/selected-pokemon.component';
 
 @NgModule( {
   declarations: [
@@ -19,7 +21,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PokedexComponent,
     CardComponent,
     HeaderComponent,
-    CardsListComponent
+    CardsListComponent,
+    CardDetailComponent,
+    SelectedPokemonComponent
   ],
   imports: [
     BrowserModule,

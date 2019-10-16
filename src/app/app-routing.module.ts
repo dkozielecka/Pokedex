@@ -5,6 +5,7 @@ import {
 } from '@angular/router';
 import { PokedexComponent } from './containers/pokedex/pokedex.component';
 import { CardComponent } from './components/card/card.component';
+import { SelectedPokemonComponent } from './containers/selected-pokemon/selected-pokemon.component';
 
 const routes: Routes = [
   {
@@ -19,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: 'card/:id',
-    component: CardComponent
+    component: SelectedPokemonComponent
   }
 ];
 
