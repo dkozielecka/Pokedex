@@ -10,8 +10,10 @@ import { ApiService } from './services/api.service';
 import { HttpClientModule } from '@angular/common/http';
 import { CardsListComponent } from './components/cards-list/cards-list.component';
 import { CardComponent } from './components/card/card.component';
+import { GoTopButtonModule } from 'ng2-go-top-button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-@NgModule({
+@NgModule( {
   declarations: [
     AppComponent,
     PokedexComponent,
@@ -22,9 +24,12 @@ import { CardComponent } from './components/card/card.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    GoTopButtonModule,
+    BrowserAnimationsModule
   ],
-  providers: [ApiService],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+  providers: [ ApiService ],
+  bootstrap: [ AppComponent ]
+} )
+export class AppModule {
+}

@@ -1,1 +1,5 @@
-<div class="card"><img src="{{ card.imageUrlHiRes }}" alt=""></div>
+<div class="card">
+  <a [routerLink]="['/card', card.id]">
+    <img src="{{ card.imageUrlHiRes }}" alt="">
+  </a>
+</div>
