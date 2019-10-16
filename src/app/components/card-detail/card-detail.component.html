@@ -1,1 +1,22 @@
-<p>card-detail works!</p>
+<section class="card--detail">
+  <section class="card--img">
+    <img [src]="imgContent" alt="">
+  </section>
+  <section class="card--description">
+    <section class="description--tittle">
+      <h2>{{ card.name }}</h2>
+      <span class="vl"></span>
+      <h3>{{ card.types }}</h3>
+    </section>
+    <section class="description--features">
+      <p>
+        <span class="feature">Attacks:</span>
+        <span *ngFor="let attack of card.attacks"> {{ attack.name }} <span class="vl"></span></span>
+      </p>
+      <p><span class="feature">Rarity: </span> <span>{{ card.rarity }}</span></p>
+      <p><span class="feature">Series:</span> <span>{{ card.series }}</span></p>
+    </section>
+  </section>
+  <button class="btn"  >Back</button>
+</section>
+

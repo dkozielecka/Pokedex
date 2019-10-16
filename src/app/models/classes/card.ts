@@ -8,6 +8,7 @@ export class Card
   imageUrlHiRes: string;
   types: string[];
   rarity: string;
+  series: string;
   attacks: Attack[];
 
   constructor( data: Pokemon ) {
@@ -17,5 +18,6 @@ export class Card
     this.types = data.types;
     this.rarity = data.rarity;
     this.attacks = data.attacks;
+    this.series = data.series;
   }
 }

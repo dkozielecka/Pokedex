@@ -43,11 +43,11 @@ export class ApiService {
     return this.pokemons$
   }
 
-  public getById( id: number ) {
+  public getById( id: string ) {
     return this.pokemons$.pipe(
       map(
         cards => cards.find(
-          card => +card.id === id ) )
+          card => card.id === id ) )
     )
   }
 }

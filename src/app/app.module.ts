@@ -14,6 +14,8 @@ import { GoTopButtonModule } from 'ng2-go-top-button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CardDetailComponent } from './components/card-detail/card-detail.component';
 import { SelectedPokemonComponent } from './containers/selected-pokemon/selected-pokemon.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 
 @NgModule( {
   declarations: [
@@ -23,7 +25,10 @@ import { SelectedPokemonComponent } from './containers/selected-pokemon/selected
     HeaderComponent,
     CardsListComponent,
     CardDetailComponent,
-    SelectedPokemonComponent
+    SelectedPokemonComponent,
+    SpinnerComponent,
+    SafeHtmlPipe,
+    SafeHtmlPipe
   ],
   imports: [
     BrowserModule,

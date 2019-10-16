@@ -2,8 +2,6 @@
 <section class="cards--wrapper">
   <app-cards-list *ngIf="pokemons$| async; else spinner" [cards]="pokemons$ | async"></app-cards-list>
   <ng-template #spinner>
-    <div class="spinner">
-      <p>Loading data<span>.</span><span>.</span><span>.</span></p>
-    </div>
+  <app-spinner></app-spinner>
   </ng-template>
 </section>

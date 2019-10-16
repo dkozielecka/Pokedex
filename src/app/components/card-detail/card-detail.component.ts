@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  Input
+} from '@angular/core';
+import { Card } from '../../models/classes/card';
+import {
+  DomSanitizer,
+  SafeUrl
+} from '@angular/platform-browser';
 
-@Component({
+@Component( {
   selector: 'app-card-detail',
   templateUrl: './card-detail.component.html',
-  styleUrls: ['./card-detail.component.scss']
-})
-export class CardDetailComponent implements OnInit {
+  styleUrls: [ './card-detail.component.scss' ]
+} )
+export class CardDetailComponent {
+  @Input() card: Card;
 
-  constructor() { }
+  constructor( private sanitizer: DomSanitizer ) {
 
-  ngOnInit() {
   }
 
+  private get imgContent(): SafeUrl {
+    return this.sanitizer.bypassSecurityTrustUrl( this.card.imageUrlHiRes );
+  }
 }
