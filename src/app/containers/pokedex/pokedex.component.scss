@@ -2,7 +2,8 @@
   width: 90%;
   background-color: #dc4949;
   margin: 5rem auto;
-  height: 80vh;
+  padding: 3rem;
+  height: auto;
   color: white;
   box-shadow: 1px 1px 5px #6d6a6a;
 }
@@ -14,11 +15,9 @@
   background-color: #e16565;
 }
 
-.card {
+app-cards-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
-  width: 25%;
-  height: 30vh;
-  margin: 1rem;
 }

@@ -3,20 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PokedexComponent } from './core/containers/pokedex/pokedex.component';
-import { CardComponent } from './core/containers/card/card.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
-import { HeaderComponent } from './core/components/header/header.component';
-import { ApiService } from './core/services/api.service';
+import { PokedexComponent } from './containers/pokedex/pokedex.component';
+
+import { HeaderComponent } from './components/header/header.component';
+import { ApiService } from './services/api.service';
 import { HttpClientModule } from '@angular/common/http';
+import { CardsListComponent } from './components/cards-list/cards-list.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PokedexComponent,
     CardComponent,
-    NavbarComponent,
-    HeaderComponent
+    HeaderComponent,
+    CardsListComponent
   ],
   imports: [
     BrowserModule,
