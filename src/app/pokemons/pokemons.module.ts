@@ -15,6 +15,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ApiService } from './services/api.service';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule( {
   declarations: [
@@ -35,7 +36,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     HttpClientModule,
     GoTopButtonModule,
     BrowserAnimationsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatToolbarModule
 
   ],
   providers: [ ApiService ],
