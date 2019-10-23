@@ -4,6 +4,7 @@ import {
 } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 
+
 @Component( {
   selector: 'app-pokedex',
   templateUrl: './pokedex.component.html',
