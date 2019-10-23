@@ -1,7 +1,13 @@
+@import '../../../../assets/sass/variables';
+
 .spinner {
   height: 70vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.spinner--circle {
+  color: $primary-color;
 }
