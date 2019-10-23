@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ApiService } from './pokemons/services/api.service';
-import { PokemonsModule } from './pokemons/pokemons.module';
+import { ApiService } from './pokedex/services/api.service';
+import { PokedexModule } from './pokedex/pokedex.module';
 
 @NgModule( {
   declarations: [
@@ -13,7 +13,7 @@ import { PokemonsModule } from './pokemons/pokemons.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PokemonsModule
+    PokedexModule
   ],
   providers: [ ApiService ],
   bootstrap: [ AppComponent ]

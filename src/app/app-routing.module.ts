@@ -3,8 +3,8 @@ import {
   Routes,
   RouterModule
 } from '@angular/router';
-import { PokedexComponent } from './pokemons/containers/pokedex/pokedex.component';
-import { SelectedPokemonComponent } from './pokemons/containers/selected-pokemon/selected-pokemon.component';
+import { PokedexComponent } from './pokedex/containers/pokedex/pokedex.component';
+import { SelectedPokemonComponent } from './pokedex/containers/selected-pokemon/selected-pokemon.component';
 
 const routes: Routes = [
   {
