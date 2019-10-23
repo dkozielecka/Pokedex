@@ -15,6 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { CardsListComponent } from './components/cards-list/cards-list.component';
 import { CardDetailComponent } from './components/card-detail/card-detail.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
+import { MatButtonModule } from '@angular/material/button';
 
 
 
@@ -38,7 +39,8 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     GoTopButtonModule,
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatButtonModule
   ]
 })
 export class PokedexModule { }

@@ -1,3 +1,5 @@
+@import "../../../../assets/sass/variables";
+
 .card--detail {
   height: 100%;
   display: flex;
@@ -77,22 +79,13 @@
 }
 
 .btn {
-  padding: 1rem 5rem;
-  border: none;
-  border-radius: 2px;
-  text-transform: uppercase;
-  font-size: 2.5rem;
-  letter-spacing: 0.1rem;
-  font-weight: normal;
-  color: #ffffff;
+  width: 13rem;
+  height: 4rem;
   position: absolute;
   top: 85vh;
   left: 80%;
-  background-color: #006EAD;
-  transition: .5s;
-  &:hover {
-    background-color: #7aceff;
-    color: #006EAD;
-    cursor: pointer;
-  }
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  color: #f2f2f2;
+  background-color: $primary-color;
 }
