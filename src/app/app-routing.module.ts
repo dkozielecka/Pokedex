@@ -3,8 +3,7 @@ import {
   Routes,
   RouterModule
 } from '@angular/router';
-import { PokedexComponent } from './pokedex/containers/pokedex/pokedex.component';
-import { SelectedPokemonComponent } from './pokedex/containers/selected-pokemon/selected-pokemon.component';
+import { PokedexComponent } from './pokedex/pokedex.component';
 
 const routes: Routes = [
   {
@@ -16,10 +15,6 @@ const routes: Routes = [
     path: 'cards',
     component: PokedexComponent,
     pathMatch: 'full',
-  },
-  {
-    path: 'card/:id',
-    component: SelectedPokemonComponent
   }
 ];
 

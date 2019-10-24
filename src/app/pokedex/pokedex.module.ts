@@ -7,15 +7,16 @@ import { GoTopButtonModule } from 'ng2-go-top-button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { PokedexComponent } from './containers/pokedex/pokedex.component';
-import { SelectedPokemonComponent } from './containers/selected-pokemon/selected-pokemon.component';
+import { PokedexComponent } from './pokedex.component';
+import { SelectedPokemonComponent } from './components/smart/selected-pokemon/selected-pokemon.component';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
-import { CardComponent } from './components/card/card.component';
-import { CardsListComponent } from './components/cards-list/cards-list.component';
-import { CardDetailComponent } from './components/card-detail/card-detail.component';
+import { CardComponent } from './components/dumb/card/card.component';
+import { CardsListComponent } from './components/dumb/cards-list/cards-list.component';
+import { CardDetailComponent } from './components/dumb/card-detail/card-detail.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { SharedModule } from '../shared/shared.module';
+import { PokedexRoutingModule } from './pokedex-routing.module';
 
 @NgModule( {
   declarations: [
@@ -40,7 +41,8 @@ import { SharedModule } from '../shared/shared.module';
     MatToolbarModule,
     MatButtonModule,
     MatDividerModule,
-    SharedModule
+    SharedModule,
+    PokedexRoutingModule
   ]
 })
 export class PokedexModule { }

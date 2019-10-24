@@ -2,7 +2,7 @@ import {
   Component,
   Input
 } from '@angular/core';
-import { Card } from '../../models/classes/card';
+import { Card } from '../../../models/classes/card';
 import {
   DomSanitizer,
   SafeUrl
