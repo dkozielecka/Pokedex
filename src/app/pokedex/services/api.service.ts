@@ -35,9 +35,10 @@ export class ApiService {
     .pipe(
       pluck( 'cards' ),
       map( ApiService.createCards ),
-      delay(1500),
+      delay( 500 ),
       shareReplay( 1 )
-    );
+    )
+  ;
 
   public getAll(): Observable<Card[ ]> {
     return this.pokemons$
@@ -47,7 +48,8 @@ export class ApiService {
     return this.pokemons$.pipe(
       map(
         cards => cards.find(
-          card => card.id === id ) )
+          card => card.id === id )
+      )
     )
   }
 }

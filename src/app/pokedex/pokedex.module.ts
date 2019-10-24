@@ -11,25 +11,23 @@ import { PokedexComponent } from './containers/pokedex/pokedex.component';
 import { SelectedPokemonComponent } from './containers/selected-pokemon/selected-pokemon.component';
 import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 import { CardComponent } from './components/card/card.component';
-import { HeaderComponent } from './components/header/header.component';
 import { CardsListComponent } from './components/cards-list/cards-list.component';
 import { CardDetailComponent } from './components/card-detail/card-detail.component';
-import { SpinnerComponent } from './components/spinner/spinner.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { SharedModule } from '../shared/shared.module';
 
-
-
-@NgModule({
+@NgModule( {
   declarations: [
     PokedexComponent,
     CardComponent,
-    HeaderComponent,
     CardsListComponent,
     CardDetailComponent,
     SelectedPokemonComponent,
-    SafeHtmlPipe,
-    SafeHtmlPipe,
-    SpinnerComponent
+    SafeHtmlPipe
+  ],
+  exports: [
+    PokedexComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +38,9 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserAnimationsModule,
     MatProgressSpinnerModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDividerModule,
+    SharedModule
   ]
 })
 export class PokedexModule { }

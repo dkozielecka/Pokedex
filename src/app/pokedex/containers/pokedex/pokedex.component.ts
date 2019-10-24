@@ -1,6 +1,5 @@
 import {
   Component,
-  OnInit
 } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 
@@ -11,13 +10,10 @@ import { ApiService } from '../../services/api.service';
   styleUrls: [ './pokedex.component.scss' ]
 } )
 export class PokedexComponent
-  implements OnInit {
+   {
 
   constructor( private pokemonApi: ApiService ) {
 
-  }
-
-  ngOnInit() {
   }
 
   get pokemons$() {
