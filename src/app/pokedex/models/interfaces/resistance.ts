@@ -1,5 +1,5 @@
 export interface Resistance {
-  type: string,
-  value: string
+  type: string;
+  value: string;
 }
 

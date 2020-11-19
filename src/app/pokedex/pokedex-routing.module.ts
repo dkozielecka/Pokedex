@@ -1,13 +1,11 @@
-import { NgModule } from '@angular/core';
-import {
-  RouterModule,
-  Routes
-} from '@angular/router';
-import { SelectedPokemonComponent } from './components/smart/selected-pokemon/selected-pokemon.component';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+
+import {SelectedPokemonComponent} from './components/selected-pokemon/selected-pokemon.component';
 
 const routes: Routes = [
   {
-    path: 'card/:id',
+    path: 'pokedex-card/:id',
     component: SelectedPokemonComponent
   }
 ];
@@ -15,7 +13,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [],
   imports: [
-    RouterModule.forChild( routes )
+    RouterModule.forChild(routes)
   ]
 })
-export class PokedexRoutingModule { }
+export class PokedexRoutingModule {
+}

@@ -1,7 +1,7 @@
 export interface Attack {
-  cost: string[],
-  name: string,
-  text: string,
-  damage: string,
-  convertedEnergyCost: number
+  cost: string[];
+  name: string;
+  text: string;
+  damage: string;
+  convertedEnergyCost: number;
 }

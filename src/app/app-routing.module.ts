@@ -3,7 +3,7 @@ import {
   Routes,
   RouterModule
 } from '@angular/router';
-import { PokedexComponent } from './pokedex/pokedex.component';
+import { PokedexComponent } from './pokedex/components/pokedex/pokedex.component';
 
 const routes: Routes = [
   {

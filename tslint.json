@@ -12,13 +12,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      "pokedex",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "app",
+      "pokedex",
       "kebab-case"
     ],
     "import-blacklist": [

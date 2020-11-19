@@ -1,4 +1,4 @@
 export interface Weakness {
-  type: string,
-  value: string
+  type: string;
+  value: string;
 }

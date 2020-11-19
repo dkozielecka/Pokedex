@@ -1,12 +1,12 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { ApiService } from './pokedex/services/api.service';
-import { PokedexModule } from './pokedex/pokedex.module';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {ApiService} from './pokedex/services/api.service';
+import {PokedexModule} from './pokedex/pokedex.module';
 
-@NgModule( {
+@NgModule({
   declarations: [
     AppComponent
   ],
@@ -15,8 +15,8 @@ import { PokedexModule } from './pokedex/pokedex.module';
     AppRoutingModule,
     PokedexModule
   ],
-  providers: [ ApiService ],
-  bootstrap: [ AppComponent ]
-} )
+  providers: [ApiService],
+  bootstrap: [AppComponent]
+})
 export class AppModule {
 }

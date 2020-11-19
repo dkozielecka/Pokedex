@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { PokemonApi } from '../models/interfaces/pokemon-api';
+import { PokemonPayload } from '../models/interfaces/pokemon-payload';
 import { Observable } from 'rxjs';
-import { Card } from '../models/classes/card';
+import { PokedexCard } from '../models/classes/pokedexCard';
 import {
   delay,
   map,
@@ -21,17 +21,17 @@ export class ApiService {
   constructor( private httpClient: HttpClient ) {
   }
 
-  static createCard( rawData: PokemonApi ): Card {
-    return new Card( rawData );
+  static createCard( rawData: PokemonPayload ): PokedexCard {
+    return new PokedexCard( rawData );
   }
 
-  static createCards( rawData: PokemonApi[] ): Card[] {
+  static createCards( rawData: PokemonPayload[] ): PokedexCard[] {
     return rawData.map(
-      data => new Card( data ) );
+      data => new PokedexCard( data ) );
   }
 
   private pokemons$ = this.httpClient
-    .get<PokemonApi>( `${ this.apiURL }/cards` )
+    .get<PokemonPayload>( `${ this.apiURL }/cards` )
     .pipe(
       pluck( 'cards' ),
       map( ApiService.createCards ),
@@ -40,7 +40,7 @@ export class ApiService {
     )
   ;
 
-  public getAll(): Observable<Card[ ]> {
+  public getAll(): Observable<PokedexCard[ ]> {
     return this.pokemons$
   }
 
