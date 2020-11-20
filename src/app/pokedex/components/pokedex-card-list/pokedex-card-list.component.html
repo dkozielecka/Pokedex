@@ -1,4 +1,8 @@
-<pokedex-card *ngFor="let card of cards" [card]="card"></pokedex-card>
+<ng-container *ngIf="cards">
+  <pokedex-card *ngFor="let card of cards" [card]="card"></pokedex-card>
+</ng-container>
 
-<button mat-flat-button (click)="load(loadingType.Prev)">Prev</button>
-<button mat-flat-button (click)="load(loadingType.Next)">Next</button>
+<div class="footer" align="end">
+  <button mat-flat-button color="primary" (click)="load(loadingType.Prev)">Prev</button>
+  <button mat-flat-button color="primary" (click)="load(loadingType.Next)">Next</button>
+</div>

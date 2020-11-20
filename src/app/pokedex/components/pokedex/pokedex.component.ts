@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 
 import {PokemonApiService} from '../../services/pokemon-api.service';
 import {PokedexCard} from '../../models/classes/pokedexCard';
-import {LoadingType} from '../../models/interfaces/loading-type.enum';
 
 
 @Component({
