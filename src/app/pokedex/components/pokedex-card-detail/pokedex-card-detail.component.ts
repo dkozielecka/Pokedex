@@ -1,21 +1,13 @@
-import {Component, Input} from '@angular/core';
-import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 
 import {PokedexCard} from '../../models/classes/pokedexCard';
 
 @Component({
   selector: 'pokedex-card-detail',
-  templateUrl: './pokedex-pokedex-card-detail.html',
-  styleUrls: ['./pokedex-pokedex-card-detail.scss']
+  templateUrl: './pokedex-card-detail.component.html',
+  styleUrls: ['./pokedex-card-detail.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PokedexCardDetailComponent {
   @Input() card: PokedexCard;
-
-  constructor(private sanitizer: DomSanitizer) {
-
-  }
-
-  private get imgContent(): SafeUrl {
-    return this.sanitizer.bypassSecurityTrustUrl(this.card.imageUrlHiRes);
-  }
 }

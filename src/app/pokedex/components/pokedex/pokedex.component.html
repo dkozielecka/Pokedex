@@ -1,7 +1,11 @@
-<app-header></app-header>
-<section class="cards--wrapper">
-  <app-cards-list *ngIf="pokemons$| async; else spinner" [cards]="pokemons$ | async"></app-cards-list>
+<pokedex-header></pokedex-header>
+<section class="cards-wrapper">
+  <div *ngIf="pokemons else spinner" class="pokedex-wrapper">
+    <pokedex-card-list [cards]="pokemons" (loadPokemons)="loadPokemons($event)"></pokedex-card-list>
+    <pokedex-card-detail [card]="selectedPokemon"></pokedex-card-detail>
+  </div>
+
   <ng-template #spinner>
-  <app-spinner></app-spinner>
+    <pokedex-spinner></pokedex-spinner>
   </ng-template>
 </section>

@@ -1,9 +1,11 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
+import {RouterModule} from '@angular/router';
 
-import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {ApiService} from './pokedex/services/api.service';
+
+import {routes} from './app.routes';
+import {PokemonApiService} from './pokedex/services/pokemon-api.service';
 import {PokedexModule} from './pokedex/pokedex.module';
 
 @NgModule({
@@ -12,10 +14,10 @@ import {PokedexModule} from './pokedex/pokedex.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    PokedexModule
+    PokedexModule,
+    RouterModule.forRoot(routes, { enableTracing: false }),
   ],
-  providers: [ApiService],
+  providers: [PokemonApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

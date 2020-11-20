@@ -1,7 +1,0 @@
-<app-header></app-header>
-<section class="card--wrapper">
-  <app-card-detail *ngIf="pokemon$ | async; else spinner" [card]="pokemon$ | async"></app-card-detail>
-</section>
-<ng-template #spinner>
-  <app-spinner></app-spinner>
-</ng-template>

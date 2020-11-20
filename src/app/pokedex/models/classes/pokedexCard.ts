@@ -1,8 +1,7 @@
 import { Pokemon } from '../interfaces/pokemon';
 import { Attack } from '../interfaces/attack';
 
-export class PokedexCard
-  implements Pokemon {
+export class PokedexCard implements Pokemon {
   id: string;
   name: string;
   imageUrl: string;

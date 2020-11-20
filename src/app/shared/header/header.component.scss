@@ -1,24 +1,25 @@
 @import '../../../assets/sass/variables';
 
-.header--wrapper {
+.header-wrapper {
   background-color: $primary-color;
   color: #ffffff;
   box-shadow: 1px 1px 5px #6d6a6a;
   padding: 1rem;
+  height: 10vh;
 }
 
-.header--row {
+.header-row {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
 }

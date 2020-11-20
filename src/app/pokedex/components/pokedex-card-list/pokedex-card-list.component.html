@@ -1,1 +1,4 @@
-<app-card *ngFor="let card of cards" [card]="card"></app-card>
+<pokedex-card *ngFor="let card of cards" [card]="card"></pokedex-card>
+
+<button mat-flat-button (click)="load(loadingType.Prev)">Prev</button>
+<button mat-flat-button (click)="load(loadingType.Next)">Next</button>
