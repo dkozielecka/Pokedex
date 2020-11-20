@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { PokedexComponent } from './components/pokedex/pokedex.component';
-import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 import { PokedexCardComponent } from './components/pokedex-card/pokedex-card.component';
 import { PokedexCardListComponent } from './components/pokedex-card-list/pokedex-card-list.component';
 import { PokedexCardDetailComponent } from './components/pokedex-card-detail/pokedex-card-detail.component';
@@ -21,7 +20,6 @@ import { SharedModule } from '../shared/shared.module';
     PokedexCardComponent,
     PokedexCardListComponent,
     PokedexCardDetailComponent,
-    SafeHtmlPipe
   ],
   exports: [
     PokedexComponent
