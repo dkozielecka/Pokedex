@@ -6,8 +6,8 @@ import {Observable} from 'rxjs';
 
 import {PokedexCard} from '../models/classes/pokedexCard';
 import {Pokemon} from '../models/interfaces/pokemon';
-import {PokedexState} from '../models/interfaces/pokedex-state';
 import {LoadingType} from '../models/interfaces/loading-type.enum';
+import {PokedexState} from '../models/interfaces/pokedex-state';
 
 @Injectable(
   {
@@ -57,12 +57,5 @@ export class PokemonApiService {
       map(pokemons => pokemons.map(pokemon => new PokedexCard(pokemon))),
       shareReplay(1));
   }
-
-  //
-  // public getPokemonById(id: string) {
-  //   return this.pokemons$.pipe(
-  //     map(cards => cards.find(card => card.id === id))
-  //   );
-  // }
 }
 
